@@ -19,6 +19,16 @@ class TestUser(unittest.TestCase):
 
         self.new_user = User("Francis", "Master@2025")
 
+    
+    def test__init(self):
+        """
+        To test if the objects are instantiated correctly.
+        """
+
+        self.assertEqual(self.new_user.user_name, "Francis")
+        self.assertEqual(self.new_user.password, "Master@2025")
+
+
     def tearDown(self):
 
         """
@@ -27,3 +37,15 @@ class TestUser(unittest.TestCase):
         """
 
         User.users_list=[]
+
+
+
+
+
+
+
+if __name__ == '__main__':
+
+    unittest.main()
+
+    
