@@ -38,6 +38,15 @@ class TestUser(unittest.TestCase):
 
         User.users_list=[]
 
+    def test_save_user(self):
+
+        """
+        test case to test if users are being saved to users_list
+        """
+
+        self.new_user.save_user()
+        self.assertEqual(len(User.users_list), 1)
+
 
 
 
