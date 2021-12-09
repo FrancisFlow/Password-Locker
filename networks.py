@@ -23,3 +23,12 @@ class Credentials:
         method to save credentials to the network_list
         """
         Credentials.network_list.append(self)
+
+
+    @classmethod
+    def display_credentials(cls):
+        """
+        Method to display all objects in the contact list
+        """
+
+        return cls.network_list

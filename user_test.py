@@ -4,7 +4,7 @@ from user import User
 class TestUser(unittest.TestCase):
 
     """
-    test class that defines test cases for the user class behaviour
+    test class that defines test cases for the user class behavior
 
     Args:
     unittest.TestCase: A test class that helps in creating test cases.
@@ -46,7 +46,6 @@ class TestUser(unittest.TestCase):
 
         self.new_user.save_user()
         self.assertEqual(len(User.users_list), 1)
-
 
 
 
