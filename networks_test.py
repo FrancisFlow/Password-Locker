@@ -63,5 +63,18 @@ class TestCredentials(unittest.TestCase):
 
 
 
+    def test_delete_credentials(self):
+        """
+        test to delete a credential
+        """
+        self.new_network.save_credentials()
+        test_account = Credentials("Google", "BaconLover", "Happy2help")
+        test_account.save_credentials()
+        
+        self.new_network.delete_credentials()
+        self.assertEqual(len(Credentials.network_list), 1)
+
+
+
 if __name__=='__main__':
     unittest.main()

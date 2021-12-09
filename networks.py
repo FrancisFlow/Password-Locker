@@ -32,3 +32,11 @@ class Credentials:
         """
 
         return cls.network_list
+
+    def delete_credentials(self):
+
+        """
+        Method to delete a credential from network_list
+        """
+
+        Credentials.network_list.remove(self)
