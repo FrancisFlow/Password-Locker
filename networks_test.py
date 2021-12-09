@@ -34,6 +34,12 @@ class TestCredentials(unittest.TestCase):
         self.assertEqual(self.new_network.network_name, "Lichess")
         self.assertEqual(self.new_network.network_username, "FrancisFlow")
         self.assertEqual(self.new_network.network_password, "Happy@allT")
+    
+
+    def test_save_credentials(self):
+
+        self.new_network.save_credentials()
+        self.assertEqual(len(Credentials.network_list), 1)
 
 
 
