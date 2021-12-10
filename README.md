@@ -1,5 +1,7 @@
 ## Password-Locker
 
+A python application that allows users to save their credentials for various networks and view them if they ever need to.
+
 ## Author
   Francis Ngigi
 
