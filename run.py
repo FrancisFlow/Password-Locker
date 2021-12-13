@@ -112,6 +112,7 @@ def main():
             else:
                 print('\n')
                 print(f'Welcome to your password locker account {user_name}')
+                add_networks()
 
                 print('\n')
                 save_new_user(login_username, login_password)
@@ -137,9 +138,10 @@ def main():
             break
         else:
             print("Invalid short code. Try again")
-            print('cc-Create a password locker account')
-            print('lg- Login to you password_Locker account')
-            print('ex- Exit your password locker account')
+
+            # print('cc-Create a password locker account')
+            # print('lg- Login to you password_Locker account')
+            # print('ex- Exit your password locker account')
             print('\n')
 
     
