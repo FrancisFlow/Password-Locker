@@ -114,7 +114,7 @@ def main():
                 print(f'Welcome to your password locker account {user_name}')
 
                 print('\n')
-                save_new_user()
+                save_new_user(login_username, login_password)
                 
         elif short_code =='lg':
                 print("Log in to your existing account")
@@ -129,6 +129,8 @@ def main():
                 else:
                     print(f'Hello {lg_username}. Welcome to you personal secrets keeper')
                     print('\n')
+                    add_networks()
+                    
                 
         elif short_code == 'ex':
             print("Welcome back any time. Cheers!")
@@ -141,18 +143,23 @@ def main():
             print('\n')
 
     
-    def add_networks():
+def add_networks():
         print ("With you account ready, you can now save credentials of any network in here ")
         print("These are the short codes for navigating through")
         print('\n')
 
         while True:
+            print('\n')
+            print("**"*15)
+
             print('ann-Add new credentials for any of your networks')
 
             print('aen - Add an existing credentials for your networks')
             print('view- Get to see all the credentials you have saved')
             print('del- Delete saved network credentials')
             print('exit- Exit from your account')
+            print("**"*15)
+
 
             short_code = input().lower()
 
