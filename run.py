@@ -60,17 +60,17 @@ def create_password(length=10):
 
 def main():
     print("Hello there. Welcome to Password Locker. Your secrets keeper. What is your name?")
-    print('/n')
+    print("\n")
     user_name=input()
-    print('/n')
+    print("\n")
     print(f'Hello {user_name}!')
     print("You can use these short codes to navigate through Password_Locker")
-    print('/n')
+    print("\n")
     while True:
         print('cc-Create a password locker account')
         print('lg- Login to you password_Locker account')
         print('ex- Exit your password locker account')
-        print('/n')
+        print('\n')
 
         short_code = input().lower()
 
@@ -86,11 +86,11 @@ def main():
 
             save_new_user(create_user(user_name, password))
 
-            print('/n')
+            print("\n")
 
             print(f'Hurray!, {user_name}, your account has successfully been created')
 
-            print('/n')
+            print("\n")
 
             print('Try login in to your password locker account')
 
@@ -110,10 +110,10 @@ def main():
                 login_password=input()
 
             else:
-                print('/n')
+                print('\n')
                 print(f'Welcome to your password locker account {user_name}')
 
-                print('/n')
+                print('\n')
                 save_new_user()
                 
         elif short_code =='lg':
@@ -127,8 +127,8 @@ def main():
                     print("Please create a password locker account")
 
                 else:
-                    print(f'Hellow {lg_username}. Welcome to you personal secrets keeper')
-                    print('/n')
+                    print(f'Hello {lg_username}. Welcome to you personal secrets keeper')
+                    print('\n')
                 
         elif short_code == 'ex':
             print("Welcome back any time. Cheers!")
@@ -138,13 +138,13 @@ def main():
             print('cc-Create a password locker account')
             print('lg- Login to you password_Locker account')
             print('ex- Exit your password locker account')
-            print('/n')
+            print('\n')
 
     
     def add_networks():
         print ("With you account ready, you can now save credentials of any network in here ")
         print("These are the short codes for navigating through")
-        print('/n')
+        print('\n')
 
         while True:
             print('ann-Add new credentials for any of your networks')
@@ -167,7 +167,7 @@ def main():
                 network_username=input()
 
 
-                print('/n')
+                print('\n')
                 print('For you password, enter either of the shortcodes')
                 print('gp- Let Password_Locker generate a password for your network')
                 print('mp- Enter my own password')
@@ -218,9 +218,9 @@ def main():
                         print(f'{network.network_name}, {network.network_username}, {network.network_password}')
 
 
-                    print('/n')
+                    print('\n')
                 else:
-                    print('/n')
+                    print('\n')
                     print('No network credentials found')
 
 
