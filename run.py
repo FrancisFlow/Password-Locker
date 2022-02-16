@@ -56,10 +56,14 @@ def create_password(length=10):
     """
     characters = string.ascii_letters +string.digits + string.punctuation
     return ''.join(random.choice(characters) for i in range(length))
-def search_credentials(network_name):
-    network_name= input()
 
-    return Credentials.search_credentials(network_name)
+
+def search_network_credentials(network_name):
+
+    username = Credentials.search_credentials(network_name).network_username
+    password = Credentials.search_credentials(network_name).network_password
+    return  print(f"Network Username:{username}, Network Password {password}")
+
 
 
 
@@ -165,11 +169,14 @@ def add_networks():
             print('aen - Add an existing credentials for your networks')
             print('view- Get to see all the credentials you have saved')
             print('del- Delete saved network credentials')
+            print('sc - search for a network by network_name')
             print('exit- Exit from your account')
             print("**"*15)
 
 
             short_code = input().lower()
+
+
 
             if short_code =='ann':
                 print ('Add credentials for a new network')
@@ -222,6 +229,12 @@ def add_networks():
                 save_network_credentials(create_new_network(network_name, network_username, network_password))
 
                 print(f'Credentials for {network_name} have been successfully saved')
+            
+            elif short_code == 'sc':
+
+                print("Enter the name of the network")
+                network_name= input()
+                search_network_credentials(network_name)
 
 
             elif short_code == 'view':
