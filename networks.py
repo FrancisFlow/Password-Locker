@@ -37,6 +37,21 @@ class Credentials:
         return False
 
 
+    @classmethod
+    def search_credentials(cls, network_name):
+
+        """
+        Args:network_name
+        """
+
+        for network in cls.network_list:
+            if network.network_name == network_name:
+                return network
+            
+        
+        return "The network does not exist"
+
+
 
 
     @classmethod

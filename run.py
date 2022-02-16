@@ -56,6 +56,14 @@ def create_password(length=10):
     """
     characters = string.ascii_letters +string.digits + string.punctuation
     return ''.join(random.choice(characters) for i in range(length))
+def search_credentials(network_name):
+    network_name= input()
+
+    return Credentials.search_credentials(network_name)
+
+
+
+
 
 
 def main():

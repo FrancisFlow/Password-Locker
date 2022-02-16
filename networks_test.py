@@ -82,6 +82,17 @@ class TestCredentials(unittest.TestCase):
         credential_exists = Credentials.credential_exists("Google")
         self.assertTrue(credential_exists)
 
+    
+    def test_search_credentials(self):
+        self.new_network.save_credentials()
+        test_account = Credentials("Google", "BaconLover", "Happy2help")
+        test_account.save_credentials()
+
+        search_credentials = Credentials.search_credentials("Google")
+        self.assertEqual(search_credentials.network_username, "BaconLover")
+
+        
+
 
 
 
