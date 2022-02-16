@@ -73,6 +73,17 @@ class TestCredentials(unittest.TestCase):
         
         self.new_network.delete_credentials()
         self.assertEqual(len(Credentials.network_list), 1)
+    
+    def test_credential_exists(self):
+        self.new_network.save_credentials()
+        test_account = Credentials("Google", "BaconLover", "Happy2help")
+        test_account.save_credentials()
+
+        credential_exists = Credentials.credential_exists()
+        self.assertTrue(credential_exists)
+
+
+        pass
 
 
 

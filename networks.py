@@ -24,6 +24,8 @@ class Credentials:
         """
         Credentials.network_list.append(self)
 
+    
+
 
     @classmethod
     def display_credentials(cls):

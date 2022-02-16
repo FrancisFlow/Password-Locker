@@ -139,9 +139,7 @@ def main():
         else:
             print("Invalid short code. Try again")
 
-            # print('cc-Create a password locker account')
-            # print('lg- Login to you password_Locker account')
-            # print('ex- Exit your password locker account')
+            
             print('\n')
 
     
@@ -190,7 +188,7 @@ def add_networks():
                     print(network_password)
                 elif short_code=='mp':
                     print("Network Password")
-                    network_password == input()
+                    network_password = input()
                 
                 else:
                     print("Invalid short code")
