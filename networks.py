@@ -61,7 +61,9 @@ class Credentials:
         """
 
         return cls.network_list
-
+        
+        
+        
     def delete_credentials(self):
 
         """

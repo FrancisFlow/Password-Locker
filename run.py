@@ -37,10 +37,13 @@ def save_network_credentials(network):
     """
     network.save_credentials()
 
-def delete_network_credentials(network):
+def delete_network_credentials(network_name):
     """
-    Function to delete a network's credentials"""
-    network.delete_credentials()
+    Function to delete a network's credentials
+    """
+    network = Credentials.search_credentials(network_name)
+    return network.delete_credentials()
+
 
 def display_networks():
 
@@ -234,6 +237,7 @@ def add_networks():
 
                 print("Enter the name of the network")
                 network_name= input()
+                print(network_name)
                 search_network_credentials(network_name)
 
 
@@ -253,7 +257,12 @@ def add_networks():
 
 
             elif short_code =='del':
-                pass
+
+                print("Enter network_name to delete")
+                network_name= input()
+                delete_network_credentials(network_name)
+                print(f"Credentials for {network_name} have been deleted")
+            
 
             elif short_code == 'exit':
                 print('Thank you for visiting Password_ Locker.')
