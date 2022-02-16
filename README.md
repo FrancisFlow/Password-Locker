@@ -11,9 +11,6 @@ A python application that allows users to save their credentials for various net
 - Run $ python3 run.py.
 - Follow navigation directions provided.
 
-## Known bugs
-One can not yet delete a saved credential, still working on that
-
 ## Development and modifications
 
 To make advancements/modifications, follow these steps:
