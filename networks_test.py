@@ -79,11 +79,9 @@ class TestCredentials(unittest.TestCase):
         test_account = Credentials("Google", "BaconLover", "Happy2help")
         test_account.save_credentials()
 
-        credential_exists = Credentials.credential_exists()
+        credential_exists = Credentials.credential_exists("Google")
         self.assertTrue(credential_exists)
 
-
-        pass
 
 
 

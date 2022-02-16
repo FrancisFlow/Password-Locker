@@ -24,7 +24,19 @@ class Credentials:
         """
         Credentials.network_list.append(self)
 
-    
+    @classmethod
+    def credential_exists(cls, network_name):
+
+        """
+        Args: network_name
+        Returns a boolean if credential exists
+        """
+        for network in cls.network_list:
+            if network.network_name == network_name:
+                return True
+        return False
+
+
 
 
     @classmethod
